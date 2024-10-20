@@ -23,7 +23,7 @@ Si no tienes Node.js instalado, sigue estos pasos:
 
 ###Configuración del Servidor
 
-#### Configuración del Servidor
+### Configuración del Servidor
 
 1. Dentro del repositorio, crea un archivo `server.js` con el siguiente contenido:
 
