@@ -21,7 +21,6 @@ Si no tienes Node.js instalado, sigue estos pasos:
 
 ```markdown
 1. **Linux (Debian/Ubuntu)**:
-   ```bash
    sudo apt update
    sudo apt install nodejs npm
 ```
