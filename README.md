@@ -15,30 +15,25 @@ Este proyecto es una página web interactiva que responde a distintas teclas del
 ## Configuración del Entorno
 Si deseas ejecutar el script con la tecla Q, necesitarás configurar un servidor. Puedes usar Node.js para este propósito o cualquier servidor web que soporte la ejecución de scripts.
 
----
-
-### Instalación de Node.js (Opcional)
-
-```markdown
-#### Instalación de Node.js (Opcional)
+### Instalación de Node.js.
 
 Si no tienes Node.js instalado, sigue estos pasos:
 
+```markdown
 1. **Linux (Debian/Ubuntu)**:
    ```bash
    sudo apt update
    sudo apt install nodejs npm
 ```
 
----
+### Configuración del Servidor
 
-### 5. Configuración del Servidor
 
-```markdown
 #### Configuración del Servidor
 
 1. Dentro del repositorio, crea un archivo `server.js` con el siguiente contenido:
 
+```markdown
    ```javascript
    const express = require('express');
    const app = express();
@@ -50,4 +45,41 @@ Si no tienes Node.js instalado, sigue estos pasos:
    app.listen(3000, () => {
        console.log('Servidor corriendo en el puerto 3000');
    });
+```
+2. instala las dependencias de Node.js
+```markdown
+  npm install express
+ ```
+3. Ejecuta el servidor
+```markdown
+  node server.js
+ ```
+4. Cuando se presione la tecla Q, el script responderá al servidor en el puerto 3000
+
+---
+
+### 6. Uso del Proyecto
+
+```markdown
+## Uso del Proyecto
+
+### 1. Abrir el archivo HTML
+
+Después de clonar el repositorio, abre el archivo `index.html` o el archivo HTML incluido en tu navegador:
+
+1. Navega al directorio donde clonaste el repositorio.
+2. Haz doble clic en el archivo `index.html` para abrirlo en tu navegador.
+
+### 2. Instrucciones de Uso
+
+Una vez que la página esté abierta, puedes interactuar con ella usando las siguientes teclas:
+
+- `→` (Flecha derecha): Abre una imagen.
+- `Esc`: Cierra la imagen.
+- `↑` (Flecha arriba): Crea una tabla 3x3 con una "X" azul en el centro.
+- `A`: Muestra el título de la página web en un cuadro de alerta.
+- `Barra espaciadora`: Abre el cliente de correo para enviar un email predefinido.
+- `Q`: Ejecuta un script si tienes un servidor configurado.
+
+
 
