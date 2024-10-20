@@ -21,8 +21,6 @@ Si no tienes Node.js instalado, sigue estos pasos:
 2. **Windows**:
 - Descarga Node.js desde nodejs.org e instala el ejecutable.
 
-###Configuración del Servidor
-
 ### Configuración del Servidor
 
 1. Dentro del repositorio, crea un archivo `server.js` con el siguiente contenido:
