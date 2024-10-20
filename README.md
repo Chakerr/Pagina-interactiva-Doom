@@ -12,27 +12,36 @@ Este proyecto es una página web interactiva que responde a distintas teclas del
   - `Barra espaciadora`: Enviar un correo electrónico.
   - `Q`: Ejecutar un script.
 
-## Configuración del Entorno
+## Instalación
+### Configuración del entorno
 Si deseas ejecutar el script con la tecla Q, necesitarás configurar un servidor. Puedes usar Node.js para este propósito o cualquier servidor web que soporte la ejecución de scripts.
 
-### Instalación de Node.js.
+---
+### Instalación de Node.js
+```markdown
+#### Instalación de Node.js (Opcional)
 
 Si no tienes Node.js instalado, sigue estos pasos:
 
-```markdown
 1. **Linux (Debian/Ubuntu)**:
+   ```bash
    sudo apt update
    sudo apt install nodejs npm
+    ```
+2. **Windows**:
+- Descarga Node.js desde nodejs.org e instala el ejecutable.
 ```
+---
 
-### Configuración del Servidor
+---
 
+###Configuración del Servidor
 
+```markdown
 #### Configuración del Servidor
 
 1. Dentro del repositorio, crea un archivo `server.js` con el siguiente contenido:
 
-```markdown
    ```javascript
    const express = require('express');
    const app = express();
@@ -44,20 +53,19 @@ Si no tienes Node.js instalado, sigue estos pasos:
    app.listen(3000, () => {
        console.log('Servidor corriendo en el puerto 3000');
    });
-```
-2. instala las dependencias de Node.js
-```markdown
-  npm install express
- ```
-3. Ejecuta el servidor
-```markdown
-  node server.js
- ```
+    ```
+2. Instala las dependencias de Node.js
+   ```bash
+    npm install express
+    ```
+3. Ejecutar el servidor:
+ ```bash
+    node server.js
+    ```
 4. Cuando se presione la tecla Q, el script responderá al servidor en el puerto 3000
-
+```
 ---
-
-### 6. Uso del Proyecto
+### Uso del Proyecto
 
 ```markdown
 ## Uso del Proyecto
@@ -79,6 +87,28 @@ Una vez que la página esté abierta, puedes interactuar con ella usando las sig
 - `A`: Muestra el título de la página web en un cuadro de alerta.
 - `Barra espaciadora`: Abre el cliente de correo para enviar un email predefinido.
 - `Q`: Ejecuta un script si tienes un servidor configurado.
+```
+### Repositorio Relacionado
+### Repositorio Relacionado
 
+Este proyecto utiliza recursos de un repositorio existente para la ejecución de algunos scripts. Puedes encontrar más información y código adicional en el siguiente repositorio: [nombre_repositorio](URL_REPOSITORIO).
 
+## Ejecución en un Servidor Web (Opcional)
+
+Si deseas alojar la página en un servidor web, puedes seguir los siguientes pasos:
+
+1. Sube los archivos HTML, CSS y JavaScript a tu servidor web.
+2. Configura el servidor para que permita la ejecución de scripts si deseas utilizar la tecla `Q`.
+3. Accede a la página desde tu navegador.
+
+## Tecnologías Utilizadas
+
+- **HTML**: Estructura de la página.
+- **CSS**: Estilos básicos y disposición de la página.
+- **JavaScript**: Lógica de interacción con las teclas del teclado.
+- **Node.js**: (Opcional) Servidor para la ejecución de scripts.
+
+## Licencia
+
+Este proyecto está bajo la licencia MIT. Consulta el archivo [LICENSE](LICENSE) para más detalles.
 
