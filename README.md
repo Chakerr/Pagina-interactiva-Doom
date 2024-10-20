@@ -45,9 +45,9 @@ Si no tienes Node.js instalado, sigue estos pasos:
     npm install express
     ```
 3. Ejecutar el servidor:
- ```bash
+   ```bash
     node server.js
- ```
+   ```
 4. Cuando se presione la tecla Q, el script responderá al servidor en el puerto 3000
 
 ### Uso del Proyecto
@@ -71,7 +71,7 @@ Una vez que la página esté abierta, puedes interactuar con ella usando las sig
   
 ### Repositorio Relacionado
 
-Este proyecto utiliza recursos de un repositorio existente para la ejecución de algunos scripts. Puedes encontrar más información y código adicional en el siguiente repositorio: [nombre_repositorio](URL_REPOSITORIO).
+Este proyecto utiliza recursos de un repositorio existente para la ejecución de algunos scripts. Puedes encontrar más información y código adicional en el siguiente repositorio: [Ejercicio-Linux](https://github.com/Chakerr/Ejercicio-Linux).
 
 ## Ejecución en un Servidor Web (Opcional)
 
