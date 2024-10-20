@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina interactiva con Doom</title>
+    <style>
+        /* Estilos básicos */
+        #imagen-contenedor {
+            display: none;
+        }
+
+        table {
+            width: 150px;
+            height: 150px;
+            border-collapse: collapse;
+        }
+
+        td {
+            border: 1px solid black;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        td#x {
+            color: blue;
+        }
+
+        #instrucciones {
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Página Web con Interacciones utilizando Doom</h1>
+
+    <!-- Imagen para abrir y cerrar -->
+    <div id="imagen-contenedor">
+        <img id="imagen" src="imagen.jpeg" alt="Imagen" width="300">
+    </div>
+
+    <!-- Contenedor de la tabla -->
+    <div id="tabla-contenedor"></div>
+
+    <!-- Instrucciones -->
+    <div id="instrucciones">
+        <h2>Instrucciones de Teclas</h2>
+        <ul>
+            <li><strong>→ :</strong> Abrir una imagen</li>
+            <li><strong>Esc:</strong> Cerrar la imagen</li>
+            <li><strong>↑ :</strong> Crear una tabla 3x3 con "X" en el centro de color azul</li>
+            <li><strong>A:</strong> Mostrar el título de la página web</li>
+            <li><strong>Barra espaciadora:</strong> Enviar un correo electrónico</li>
+            <li><strong>Q:</strong> Ejecutar un script</li>
+            <li><strong>O:</strong> Realizar una consulta a la base de datos (no es posible desde el navegador)</li>
+        </ul>
+    </div>
+
+    <script>
+        // Evento que escucha cuando se presiona una tecla
+        document.addEventListener('keydown', function(event) {
+            const key = event.key;
+
+            // 1. Flecha derecha - abrir una imagen
+            if (key === 'ArrowRight') {
+                document.getElementById('imagen-contenedor').style.display = 'block';
+            }
+
+            // 2. Tecla Esc - cerrar la imagen
+            if (key === 'Escape') {
+                document.getElementById('imagen-contenedor').style.display = 'none';
+            }
+
+            if (key === 'ArrowUp') {
+                let tablaHTML = '<table>';
+                let contador = 1; // Contador para los números
+
+                for (let i = 0; i < 3; i++) {
+                    tablaHTML += '<tr>';
+                    for (let j = 0; j < 3; j++) {
+                        if (i === 1 && j === 1) {
+                            tablaHTML += '<td id="x">X</td>'; // Celda central
+                        } else {
+                            tablaHTML += '<td>' + contador + '</td>'; // Otras celdas con números
+                            contador++;
+                        }
+                    }
+                    tablaHTML += '</tr>';
+                }
+                tablaHTML += '</table>';
+                document.getElementById('tabla-contenedor').innerHTML = tablaHTML;
+            }
+
+            // 4. Tecla "A" - mostrar el título de la página web
+            if (key.toLowerCase() === 'a') {
+                alert(document.title);
+            }
+
+            // 5. Barra espaciadora - abrir un correo electrónico en el cliente de correo
+            if (key === ' ') {
+                window.location.href = "mailto:correo@example.com?subject=Consulta&body=Mensaje desde la web";
+            }
+		// 6. Tecla "Q" - Ejecutar un script
+if (key.toLowerCase() === 'q') {
+    fetch('/execute-script')
+        .then(response => response.text())
+        .then(data => alert(data))
+        .catch(error => alert('Error al ejecutar el script: ' + error));
+}
+
+});
+    </script>
+</body>
+</html>
+
