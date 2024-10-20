@@ -71,14 +71,6 @@ Una vez que la página esté abierta, puedes interactuar con ella usando las sig
 
 Este proyecto utiliza recursos de un repositorio existente para la ejecución de algunos scripts. Puedes encontrar más información y código adicional en el siguiente repositorio: [Ejercicio-Linux](https://github.com/Chakerr/Ejercicio-Linux).
 
-## Ejecución en un Servidor Web (Opcional)
-
-Si deseas alojar la página en un servidor web, puedes seguir los siguientes pasos:
-
-1. Sube los archivos HTML, CSS y JavaScript a tu servidor web.
-2. Configura el servidor para que permita la ejecución de scripts si deseas utilizar la tecla `Q`.
-3. Accede a la página desde tu navegador.
-
 ## Tecnologías Utilizadas
 
 - **HTML**: Estructura de la página.
