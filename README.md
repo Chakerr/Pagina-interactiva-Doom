@@ -21,32 +21,16 @@ Si no tienes Node.js instalado, sigue estos pasos:
 2. **Windows**:
 - Descarga Node.js desde nodejs.org e instala el ejecutable.
 
-### Configuración del Servidor
-
-1. Dentro del repositorio, crea un archivo `server.js` con el siguiente contenido:
-
-   ```javascript
-   const express = require('express');
-   const app = express();
-
-   app.get('/execute-script', (req, res) => {
-       res.send('Script ejecutado correctamente');
-   });
-
-   app.listen(3000, () => {
-       console.log('Servidor corriendo en el puerto 3000');
-   });
-   ```
-   
-2. Instala las dependencias de Node.js
+### Configuración del Servidor  
+1. Instala las dependencias de Node.js
    ```bash
     npm install express
     ```
-3. Ejecutar el servidor:
+2. Ejecutar el servidor:
    ```bash
     node server.js
    ```
-4. Cuando se presione la tecla Q, el script responderá al servidor en el puerto 3000
+3. Cuando se presione la tecla Q, el script responderá al servidor en el puerto 3000
 
 ### Uso del Proyecto
 ## 1. Abrir el archivo HTML
