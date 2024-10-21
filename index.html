@@ -104,14 +104,6 @@
             if (key === ' ') {
                 window.location.href = "mailto:correo@example.com?subject=Consulta&body=Mensaje desde la web";
             }
-		// 6. Tecla "Q" - Ejecutar un script
-if (key.toLowerCase() === 'q') {
-    fetch('/execute-script')
-        .then(response => response.text())
-        .then(data => alert(data))
-        .catch(error => alert('Error al ejecutar el script: ' + error));
-}
-
 });
     </script>
 </body>
